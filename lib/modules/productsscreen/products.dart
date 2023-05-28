@@ -15,7 +15,7 @@ import '../../models/cat_model.dart';
 import '../../models/home_model.dart';
 
 class ProductsScreen extends StatelessWidget {
-  ProductsScreen({super.key});
+  const ProductsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class ProductsScreen extends StatelessWidget {
     );
   }
 
-  Widget HomeBuilder(HomeModel? model, CategoriesModel? c_model, context) {
+  Widget HomeBuilder(HomeModel? model, CategoriesModel? cModel, context) {
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: Column(
@@ -89,19 +89,19 @@ class ProductsScreen extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            height: 120,
+          SizedBox(
+            height: 140,
             child: ListView.separated(
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
-              itemCount: c_model!.data!.data!.length,
+              itemCount: cModel!.data!.data!.length,
               separatorBuilder: (BuildContext context, int index) {
                 return const SizedBox(
                   width: 4,
                 );
               },
               itemBuilder: (BuildContext context, int index) {
-                return bulidCatItem(c_model.data!.data![index], context);
+                return bulidCatItem(cModel.data!.data![index], context);
               },
             ),
           ),
@@ -226,7 +226,7 @@ class ProductsScreen extends StatelessWidget {
         onTap: () {
           navigatTO(context, CatD(id: model!.id));
         },
-        child: Container(
+        child: SizedBox(
           width: 90,
           child: Column(
             mainAxisSize: MainAxisSize.min,

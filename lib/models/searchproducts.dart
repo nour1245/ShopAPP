@@ -1,6 +1,6 @@
 class searchProducts {
   bool? status;
-  Null? message;
+  void message;
   Data? data;
 
   searchProducts({this.status, this.message, this.data});
@@ -8,7 +8,7 @@ class searchProducts {
   searchProducts.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     message = json['message'];
-    data = json['data'] != null ? new Data.fromJson(json['data']) : null;
+    data = json['data'] != null ? Data.fromJson(json['data']) : null;
   }
 }
 
@@ -19,10 +19,10 @@ class Data {
   int? from;
   int? lastPage;
   String? lastPageUrl;
-  Null? nextPageUrl;
+  void nextPageUrl;
   String? path;
   int? perPage;
-  Null? prevPageUrl;
+  void prevPageUrl;
   int? to;
   int? total;
 
@@ -45,7 +45,7 @@ class Data {
     if (json['data'] != null) {
       data = <ProductData>[];
       json['data'].forEach((v) {
-        data!.add(new ProductData.fromJson(v));
+        data!.add(ProductData.fromJson(v));
       });
     }
     firstPageUrl = json['first_page_url'];

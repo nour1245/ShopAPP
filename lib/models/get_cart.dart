@@ -1,6 +1,6 @@
 class GetCartModel {
   bool? status;
-  Null? message;
+  void message;
   Data? data;
 
   GetCartModel({this.status, this.message, this.data});

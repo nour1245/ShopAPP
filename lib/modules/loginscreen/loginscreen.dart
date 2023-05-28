@@ -1,10 +1,8 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shop_app/cubit/logincubit/login_cubit.dart';
 import 'package:shop_app/layout/shoplayout.dart';
-import 'package:shop_app/models/shop_models.dart';
 import 'package:shop_app/modules/registerscreen/registerscreen.dart';
 import 'package:shop_app/shared/components/components.dart';
 import 'package:shop_app/shared/components/constants.dart';
@@ -29,7 +27,7 @@ class LoginScreen extends StatelessWidget {
                 value: state.loginModel.data!.token,
               ).then((value) {
                 token = state.loginModel.data!.token;
-                navigatAndReplace(context, ShopLayout());
+                navigatAndReplace(context, const ShopLayout());
               });
               showToast(msg: state.loginModel.message, color: Colors.green);
             } else {
@@ -53,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                           'LOGIN',
                           style: Theme.of(context)
                               .textTheme
-                              .headline4
+                              .headlineMedium
                               ?.copyWith(color: Colors.black),
                         ),
 

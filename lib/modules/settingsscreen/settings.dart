@@ -2,14 +2,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:shop_app/cubit/shopcubit/shopcubit_cubit.dart';
 import 'package:shop_app/cubit/shopcubit/shopcubit_state.dart';
 import 'package:shop_app/shared/components/components.dart';
 import 'package:shop_app/shared/components/constants.dart';
 
 class SettingsScreen extends StatelessWidget {
-  SettingsScreen({super.key});
+  const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

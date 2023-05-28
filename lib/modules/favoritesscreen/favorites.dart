@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop_app/cubit/shopcubit/shopcubit_cubit.dart';
 import 'package:shop_app/cubit/shopcubit/shopcubit_state.dart';
-import 'package:shop_app/models/shop_models.dart';
 import 'package:shop_app/shared/components/components.dart';
 
 class FavouritsScreen extends StatelessWidget {

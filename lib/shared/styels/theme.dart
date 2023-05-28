@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 var lightTheme = ThemeData(
+  useMaterial3: true,
   fontFamily: 'Roboto-Regular',
   inputDecorationTheme: InputDecorationTheme(
     focusedBorder: OutlineInputBorder(
@@ -44,7 +45,7 @@ var lightTheme = ThemeData(
     elevation: 0.0,
   ),
   textTheme: const TextTheme(
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       color: Colors.black,
       fontSize: 18.0,
       fontWeight: FontWeight.w800,
@@ -53,6 +54,7 @@ var lightTheme = ThemeData(
 );
 
 var darkTheme = ThemeData(
+  useMaterial3: true,
   fontFamily: 'Roboto-Regular',
   inputDecorationTheme: InputDecorationTheme(
     focusedBorder: OutlineInputBorder(
@@ -96,10 +98,10 @@ var darkTheme = ThemeData(
     elevation: 0.0,
   ),
   textTheme: const TextTheme(
-    subtitle1: TextStyle(
+    titleMedium: TextStyle(
       color: Colors.white,
     ),
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       color: Colors.white,
       fontSize: 18.0,
       fontWeight: FontWeight.w800,

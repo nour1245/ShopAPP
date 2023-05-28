@@ -29,7 +29,7 @@ class RegisterScreen extends StatelessWidget {
                   value: state.loginModel.data!.token,
                 ).then((value) {
                   token = state.loginModel.data!.token;
-                  navigatAndReplace(context, ShopLayout());
+                  navigatAndReplace(context, const ShopLayout());
                 });
                 showToast(msg: state.loginModel.message, color: Colors.green);
               } else {
@@ -52,7 +52,7 @@ class RegisterScreen extends StatelessWidget {
                           'Register',
                           style: Theme.of(context)
                               .textTheme
-                              .headline4
+                              .headlineMedium
                               ?.copyWith(color: Colors.black),
                         ),
 

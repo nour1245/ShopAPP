@@ -7,7 +7,7 @@ import '../../cubit/shopcubit/shopcubit_state.dart';
 import '../../shared/components/components.dart';
 
 class CatD extends StatefulWidget {
-  CatD({super.key, this.id});
+  const CatD({super.key, this.id});
   final id;
 
   @override

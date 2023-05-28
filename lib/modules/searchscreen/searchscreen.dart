@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -42,7 +41,7 @@ class SearchScreen extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                  if (state is LoadingSearchState) LinearProgressIndicator(),
+                  if (state is LoadingSearchState) const LinearProgressIndicator(),
                   if (state is SearchLoadState)
                     Expanded(
                       child: ListView.separated(

@@ -1,9 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:shop_app/cubit/shopcubit/shopcubit_cubit.dart';
-import 'package:shop_app/models/searchproducts.dart';
 
 Widget DefultButtn({
   var height = 50.0,
@@ -171,7 +169,7 @@ Widget buildListItem(model, context, {bool isOldPrice = true}) => Padding(
                         mainAxisAlignment: MainAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Container(
+                          SizedBox(
                             width: 90,
                             child: Text(
                               '${model.price}',

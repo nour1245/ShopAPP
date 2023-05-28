@@ -55,7 +55,7 @@ class CategoriesScreen extends StatelessWidget {
                 Expanded(
                     child: Text(
                   'Total: ${ShopCubit.get(context).getcartmodel!.data!.total}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                   ),

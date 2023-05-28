@@ -12,7 +12,7 @@ class FavoritesModel {
 
 class UserFavorites {
   bool? status;
-  Null? message;
+  void message;
   Data? data;
 
   UserFavorites({this.status, this.message, this.data});
@@ -31,10 +31,10 @@ class Data {
   int? from;
   int? lastPage;
   String? lastPageUrl;
-  Null? nextPageUrl;
+  void nextPageUrl;
   String? path;
   int? perPage;
-  Null? prevPageUrl;
+  void prevPageUrl;
   int? to;
   int? total;
 

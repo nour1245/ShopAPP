@@ -1,6 +1,6 @@
 class CategegoryDModel {
   bool? status;
-  Null? message;
+  void message;
   Data? data;
 
   CategegoryDModel({required this.status, this.message, required this.data});
@@ -19,10 +19,10 @@ class Data {
   int? from;
   int? lastPage;
   String? lastPageUrl;
-  Null? nextPageUrl;
+  void nextPageUrl;
   String? path;
   int? perPage;
-  Null? prevPageUrl;
+  void prevPageUrl;
   int? to;
   int? total;
 

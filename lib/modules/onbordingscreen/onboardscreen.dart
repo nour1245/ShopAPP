@@ -16,7 +16,7 @@ class BoardingModel {
 }
 
 class OnboardScreen extends StatefulWidget {
-  OnboardScreen({super.key});
+  const OnboardScreen({super.key});
 
   @override
   State<OnboardScreen> createState() => _OnboardScreenState();

@@ -21,10 +21,10 @@ class ShopCubit extends Cubit<ShopcubitStates> {
   ShopCubit() : super(ShopcubitInitial());
   static ShopCubit get(context) => BlocProvider.of(context);
   List<Widget> bottomScreens = [
-    ProductsScreen(),
-    CategoriesScreen(),
-    FavouritsScreen(),
-    SettingsScreen(),
+    const ProductsScreen(),
+    const CategoriesScreen(),
+    const FavouritsScreen(),
+    const SettingsScreen(),
   ];
   var currentIndex = 0;
 
