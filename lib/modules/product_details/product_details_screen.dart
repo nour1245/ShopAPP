@@ -25,7 +25,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
       builder: (context, state) => Scaffold(
         appBar: AppBar(),
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(12.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,11 +72,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
               const SizedBox(
                 height: 25,
               ),
-              Text(
-                '${widget.model.name}',
-                style: const TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: Text(
+                  '${widget.model.name}',
+                  style: const TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -84,34 +87,31 @@ class _DetailsScreenState extends State<DetailsScreen> {
               ),
               FittedBox(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(
-                      '${widget.model.price}',
-                      style: const TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w800,
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: Text(
+                        '${widget.model.price} EGP',
+                        style: const TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w800,
+                        ),
                       ),
                     ),
                     const SizedBox(
-                      height: 25,
+                      width: 25,
                     ),
                     if (widget.model.price != widget.model.oldPrice)
-                      Row(
-                        children: [
-                          const SizedBox(
-                            width: 14,
-                          ),
-                          Text(
-                            '${widget.model.oldPrice}',
-                            style: const TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w400,
-                              decoration: TextDecoration.lineThrough,
-                            ),
-                          )
-                        ],
-                      ),
+                      Text(
+                        '${widget.model.oldPrice} EGP',
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
+                          decoration: TextDecoration.lineThrough,
+                        ),
+                      )
                   ],
                 ),
               ),
@@ -147,6 +147,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.green,
           child: const Icon(Icons.add_shopping_cart),
           onPressed: () {
             ShopCubit.get(context).addToCart(widget.model.id);

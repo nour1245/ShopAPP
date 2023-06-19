@@ -5,7 +5,7 @@ import 'package:shop_app/cubit/shopcubit/shopcubit_cubit.dart';
 
 Widget DefultButtn({
   var height = 50.0,
-  var color = Colors.blue,
+  var color = Colors.green,
   var width = double.infinity,
   required String text,
   required Function function,

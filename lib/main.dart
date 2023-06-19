@@ -58,7 +58,9 @@ class _MyAppState extends State<MyApp> {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: lightTheme,
+        theme: lightTheme.copyWith(
+          primaryColor: Colors.green,
+        ),
         home: widget.startwidget,
       ),
     );

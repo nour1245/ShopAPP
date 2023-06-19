@@ -3,31 +3,32 @@ import 'package:flutter/services.dart';
 
 var lightTheme = ThemeData(
   useMaterial3: true,
+  primaryColor: Colors.green,
   fontFamily: 'Roboto-Regular',
   inputDecorationTheme: InputDecorationTheme(
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(50.0),
-      borderSide: const BorderSide(width: 3, color: Colors.blueAccent),
+      borderSide: const BorderSide(width: 3, color: Colors.green),
     ),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(50.0),
       borderSide: const BorderSide(color: Colors.black),
     ),
     hintStyle: const TextStyle(
-      color: Colors.black,
+      color: Colors.grey,
     ),
     labelStyle: const TextStyle(
-      color: Colors.black,
+      color: Colors.grey,
     ),
-    iconColor: Colors.black,
-    suffixIconColor: Colors.black,
-    prefixIconColor: Colors.black,
+    iconColor: Colors.grey,
+    suffixIconColor: Colors.grey,
+    prefixIconColor: Colors.grey,
   ),
-  primarySwatch: Colors.blue,
+  primarySwatch: Colors.green,
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     type: BottomNavigationBarType.fixed,
     backgroundColor: Colors.white,
-    selectedItemColor: Colors.blue,
+    selectedItemColor: Colors.green,
   ),
   scaffoldBackgroundColor: Colors.white,
   appBarTheme: const AppBarTheme(
@@ -59,7 +60,7 @@ var darkTheme = ThemeData(
   inputDecorationTheme: InputDecorationTheme(
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(50.0),
-      borderSide: const BorderSide(width: 3, color: Colors.blueAccent),
+      borderSide: const BorderSide(width: 3, color: Colors.green),
     ),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(50.0),
@@ -75,11 +76,11 @@ var darkTheme = ThemeData(
     suffixIconColor: Colors.white,
     prefixIconColor: Colors.white,
   ),
-  primarySwatch: Colors.blue,
+  primarySwatch: Colors.green,
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     type: BottomNavigationBarType.fixed,
     backgroundColor: Color.fromARGB(255, 24, 25, 26),
-    selectedItemColor: Colors.blue,
+    selectedItemColor: Colors.green,
     unselectedItemColor: Colors.grey,
   ),
   scaffoldBackgroundColor: const Color.fromARGB(255, 32, 31, 31),
