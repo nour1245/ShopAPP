@@ -127,6 +127,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
                     count: board.length),
                 const Spacer(),
                 FloatingActionButton(
+                  backgroundColor: const Color.fromARGB(255, 99, 228, 103),
                   child:
                       isLast ? const Text('Login') : const Icon(Icons.forward),
                   onPressed: () {

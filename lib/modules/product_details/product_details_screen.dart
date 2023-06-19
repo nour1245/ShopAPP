@@ -147,7 +147,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.green,
+          backgroundColor: const Color.fromARGB(255, 103, 233, 107),
           child: const Icon(Icons.add_shopping_cart),
           onPressed: () {
             ShopCubit.get(context).addToCart(widget.model.id);
