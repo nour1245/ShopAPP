@@ -38,6 +38,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
+  flutter_paypal_checkout: ^1.0.1
   fluttertoast: ^8.1.2
   google_fonts: ^4.0.3
   image_picker: ^0.8.6+1

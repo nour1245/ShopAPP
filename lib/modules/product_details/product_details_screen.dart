@@ -23,7 +23,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
     return BlocConsumer<ShopCubit, ShopcubitStates>(
       listener: (context, state) {},
       builder: (context, state) => Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 249, 249, 249),
+        ),
         body: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
@@ -147,7 +149,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: const Color.fromARGB(255, 103, 233, 107),
+          backgroundColor: const Color.fromARGB(225, 239, 54, 81),
           child: const Icon(Icons.add_shopping_cart),
           onPressed: () {
             ShopCubit.get(context).addToCart(widget.model.id);

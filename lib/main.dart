@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop_app/blocobserver.dart';
 import 'package:shop_app/cubit/shopcubit/shopcubit_cubit.dart';
@@ -58,9 +59,7 @@ class _MyAppState extends State<MyApp> {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: lightTheme.copyWith(
-          primaryColor: Colors.green,
-        ),
+        theme: darkTheme.copyWith(),
         home: widget.startwidget,
       ),
     );

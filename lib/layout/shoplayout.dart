@@ -16,6 +16,7 @@ class ShopLayout extends StatelessWidget {
         var cubit = ShopCubit.get(context);
         return Scaffold(
           appBar: AppBar(
+            backgroundColor: Color.fromARGB(255, 249, 249, 249),
             title: const Text('Shop'),
             actions: [
               IconButton(

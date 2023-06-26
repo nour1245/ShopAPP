@@ -72,7 +72,12 @@ class _OnboardScreenState extends State<OnboardScreen> {
         actions: [
           TextButton(
             onPressed: () => submit(),
-            child: const Text('SKIP'),
+            child: const Text(
+              'SKIP',
+              style: TextStyle(
+                color: Color.fromARGB(225, 239, 54, 81),
+              ),
+            ),
           ),
         ],
       ),
@@ -108,7 +113,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
                 SmoothPageIndicator(
                     effect: CustomizableEffect(
                       activeDotDecoration: DotDecoration(
-                        color: Colors.blue,
+                        color: Color.fromARGB(225, 239, 54, 81),
                         width: 32,
                         height: 12,
                         rotationAngle: 180,
@@ -127,7 +132,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
                     count: board.length),
                 const Spacer(),
                 FloatingActionButton(
-                  backgroundColor: const Color.fromARGB(255, 99, 228, 103),
+                  backgroundColor: const Color.fromARGB(225, 239, 54, 81),
                   child:
                       isLast ? const Text('Login') : const Icon(Icons.forward),
                   onPressed: () {
@@ -165,6 +170,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
           Text(
             model.title,
             style: const TextStyle(
+              color: Colors.white,
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
@@ -175,6 +181,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
           Text(
             model.body,
             style: const TextStyle(
+              color: Colors.white,
               fontSize: 15,
             ),
           ),

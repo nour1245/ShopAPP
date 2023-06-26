@@ -38,7 +38,9 @@ class RegisterScreen extends StatelessWidget {
             }
           },
           builder: (context, state) => Scaffold(
-            appBar: AppBar(),
+            appBar: AppBar(
+              backgroundColor: const Color.fromARGB(255, 249, 249, 249),
+            ),
             body: Center(
               child: SingleChildScrollView(
                 child: Padding(
@@ -61,6 +63,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                         const Text(
                           'Register now to browse best offers',
+                          style: TextStyle(color: Colors.black),
                         ),
 
                         const SizedBox(

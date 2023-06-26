@@ -1,93 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-var lightTheme = ThemeData(
+var darkTheme = ThemeData(
+  primaryColor: Color.fromARGB(225, 239, 54, 81),
   useMaterial3: true,
-  primaryColor: Colors.green,
   fontFamily: 'Roboto-Regular',
   inputDecorationTheme: InputDecorationTheme(
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(50.0),
-      borderSide: const BorderSide(width: 3, color: Colors.green),
+      borderSide:
+          const BorderSide(width: 3, color: Color.fromARGB(255, 42, 44, 54)),
     ),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(50.0),
-      borderSide: const BorderSide(color: Colors.black),
+      borderSide: const BorderSide(color: Color.fromARGB(255, 42, 44, 54)),
     ),
     hintStyle: const TextStyle(
-      color: Colors.grey,
+      color: Color.fromARGB(255, 171, 180, 189),
     ),
     labelStyle: const TextStyle(
-      color: Colors.grey,
+      color: Color.fromARGB(255, 171, 180, 189),
     ),
-    iconColor: Colors.grey,
-    suffixIconColor: Colors.grey,
-    prefixIconColor: Colors.grey,
+    iconColor: Colors.black,
+    suffixIconColor: Colors.black,
+    prefixIconColor: Colors.black,
   ),
-  primarySwatch: Colors.green,
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     type: BottomNavigationBarType.fixed,
-    backgroundColor: Colors.white,
-    selectedItemColor: Colors.green,
+    backgroundColor: Colors.black,
+    selectedItemColor: Color.fromARGB(225, 239, 54, 81),
+    unselectedItemColor: Color.fromARGB(255, 171, 180, 189),
   ),
-  scaffoldBackgroundColor: Colors.white,
+  scaffoldBackgroundColor: Color.fromARGB(255, 249, 249, 249),
   appBarTheme: const AppBarTheme(
     iconTheme: IconThemeData(color: Colors.black),
     titleTextStyle: TextStyle(
       color: Colors.black,
-      fontSize: 25.0,
-      fontWeight: FontWeight.bold,
-    ),
-    systemOverlayStyle: SystemUiOverlayStyle(
-      statusBarColor: Colors.white,
-      statusBarIconBrightness: Brightness.dark,
-    ),
-    backgroundColor: Colors.white,
-    elevation: 0.0,
-  ),
-  textTheme: const TextTheme(
-    bodyLarge: TextStyle(
-      color: Colors.black,
-      fontSize: 18.0,
-      fontWeight: FontWeight.w800,
-    ),
-  ),
-);
-
-var darkTheme = ThemeData(
-  useMaterial3: true,
-  fontFamily: 'Roboto-Regular',
-  inputDecorationTheme: InputDecorationTheme(
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(50.0),
-      borderSide: const BorderSide(width: 3, color: Colors.green),
-    ),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(50.0),
-      borderSide: const BorderSide(color: Colors.white),
-    ),
-    hintStyle: const TextStyle(
-      color: Colors.white,
-    ),
-    labelStyle: const TextStyle(
-      color: Colors.white,
-    ),
-    iconColor: Colors.white,
-    suffixIconColor: Colors.white,
-    prefixIconColor: Colors.white,
-  ),
-  primarySwatch: Colors.green,
-  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    type: BottomNavigationBarType.fixed,
-    backgroundColor: Color.fromARGB(255, 24, 25, 26),
-    selectedItemColor: Colors.green,
-    unselectedItemColor: Colors.grey,
-  ),
-  scaffoldBackgroundColor: const Color.fromARGB(255, 32, 31, 31),
-  appBarTheme: const AppBarTheme(
-    iconTheme: IconThemeData(color: Colors.white),
-    titleTextStyle: TextStyle(
-      color: Colors.white,
       fontSize: 25.0,
       fontWeight: FontWeight.bold,
     ),
@@ -100,10 +48,10 @@ var darkTheme = ThemeData(
   ),
   textTheme: const TextTheme(
     titleMedium: TextStyle(
-      color: Colors.white,
+      color: Colors.black,
     ),
     bodyLarge: TextStyle(
-      color: Colors.white,
+      color: Colors.black,
       fontSize: 18.0,
       fontWeight: FontWeight.w800,
     ),

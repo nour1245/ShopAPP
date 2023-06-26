@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop_app/cubit/shopcubit/shopcubit_cubit.dart';
 import 'package:shop_app/cubit/shopcubit/shopcubit_state.dart';
+import 'package:shop_app/shared/components/components.dart';
+import 'package:shop_app/shared/network/remote/paypal.dart';
 import '../../models/get_cart.dart';
 
 class CategoriesScreen extends StatelessWidget {
@@ -52,14 +54,33 @@ class CategoriesScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Expanded(
-                    child: Text(
+                Text(
                   'Total: ${ShopCubit.get(context).getcartmodel!.data!.total}',
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                   ),
-                )),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.05,
+                ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.only(bottom: 10),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    height: MediaQuery.of(context).size.height * 0.08,
+                    color: Colors.green,
+                    child: MaterialButton(
+                      onPressed: () {
+                        navigatTO(context, CheckoutPage());
+                      },
+                      child: const Text(
+                        'Check out',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

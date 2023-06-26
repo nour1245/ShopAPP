@@ -84,6 +84,7 @@ class ProductsScreen extends StatelessWidget {
             child: Text(
               'Categories',
               style: TextStyle(
+                color: Colors.black,
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),
@@ -110,6 +111,7 @@ class ProductsScreen extends StatelessWidget {
             child: Text(
               'New Products',
               style: TextStyle(
+                color: Colors.black,
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),
@@ -200,7 +202,7 @@ class ProductsScreen extends StatelessWidget {
                         CircleAvatar(
                           backgroundColor:
                               ShopCubit.get(context).favorites[model.id]!
-                                  ? Colors.blue
+                                  ? Color.fromARGB(225, 239, 54, 81)
                                   : Colors.grey,
                           child: IconButton(
                             onPressed: () {
@@ -232,7 +234,7 @@ class ProductsScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               CircleAvatar(
-                backgroundColor: Colors.black.withOpacity(0.1),
+                backgroundColor: Colors.white,
                 radius: 40,
                 child: CachedNetworkImage(
                   imageUrl: ('${model?.image}'),

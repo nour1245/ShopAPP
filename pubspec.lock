@@ -214,6 +214,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.0"
+  flutter_inappwebview:
+    dependency: transitive
+    description:
+      name: flutter_inappwebview
+      sha256: f73505c792cf083d5566e1a94002311be497d984b5607f25be36d685cf6361cf
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.7.2+3"
   flutter_launcher_icons:
     dependency: "direct dev"
     description:
@@ -230,6 +238,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  flutter_paypal_checkout:
+    dependency: "direct main"
+    description:
+      name: flutter_paypal_checkout
+      sha256: "5cc8bd4e67acb9befbbc935a0f2d4d468ddb8e5120a24ad21ed7518b44b47b2e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:

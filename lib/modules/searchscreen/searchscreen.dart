@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop_app/cubit/searchcubit/search_cubit.dart';
@@ -17,7 +16,9 @@ class SearchScreen extends StatelessWidget {
         listener: (context, state) {},
         builder: (context, state) {
           return Scaffold(
-            appBar: AppBar(),
+            appBar: AppBar(
+              backgroundColor: Color.fromARGB(255, 249, 249, 249),
+            ),
             body: Form(
               key: formKey,
               child: Column(
@@ -41,7 +42,8 @@ class SearchScreen extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                  if (state is LoadingSearchState) const LinearProgressIndicator(),
+                  if (state is LoadingSearchState)
+                    const LinearProgressIndicator(),
                   if (state is SearchLoadState)
                     Expanded(
                       child: ListView.separated(

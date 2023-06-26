@@ -24,7 +24,9 @@ class _CatDState extends State<CatD> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 249, 249, 249),
+      ),
       body: BlocConsumer<ShopCubit, ShopcubitStates>(
         listener: (context, state) {},
         builder: (context, state) => ConditionalBuilder(

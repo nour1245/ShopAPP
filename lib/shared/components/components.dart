@@ -5,7 +5,7 @@ import 'package:shop_app/cubit/shopcubit/shopcubit_cubit.dart';
 
 Widget DefultButtn({
   var height = 50.0,
-  var color = Colors.green,
+  var color = const Color.fromARGB(225, 239, 54, 81),
   var width = double.infinity,
   required String text,
   required Function function,
@@ -26,6 +26,7 @@ Widget DefultButtn({
         child: Text(
           isUperCase ? text.toUpperCase() : text,
           style: TextStyle(
+            color: Colors.white,
             fontWeight: fontweight,
           ),
         ),
@@ -66,13 +67,20 @@ Widget DefultTFF({
       controller: controrller,
       decoration: InputDecoration(
         labelText: label,
+        labelStyle: const TextStyle(color: Colors.grey),
+        fillColor: Colors.white,
+        filled: true,
         border: const OutlineInputBorder(),
         prefixIcon: Icon(
           prefix,
+          color: Colors.black,
         ),
         suffixIcon: suffix != null
             ? IconButton(
-                icon: Icon(suffix),
+                icon: Icon(
+                  suffix,
+                  color: Colors.black,
+                ),
                 onPressed: () {
                   suffixpresed!();
                 },
@@ -202,7 +210,7 @@ Widget buildListItem(model, context, {bool isOldPrice = true}) => Padding(
                           CircleAvatar(
                             backgroundColor:
                                 ShopCubit.get(context).favorites[model.id]!
-                                    ? Colors.blue
+                                    ? Color.fromARGB(225, 239, 54, 81)
                                     : Colors.grey,
                             child: IconButton(
                               onPressed: () {

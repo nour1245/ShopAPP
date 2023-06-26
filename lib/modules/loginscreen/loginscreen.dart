@@ -37,7 +37,9 @@ class LoginScreen extends StatelessWidget {
         },
         builder: (context, state) {
           return Scaffold(
-            appBar: AppBar(),
+            appBar: AppBar(
+              backgroundColor: Color.fromARGB(255, 249, 249, 249),
+            ),
             body: Center(
               child: SingleChildScrollView(
                 child: Padding(
@@ -60,6 +62,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         const Text(
                           'login now to browse best offers',
+                          style: TextStyle(color: Colors.black),
                         ),
                         const SizedBox(
                           height: 30.0,
@@ -107,6 +110,7 @@ class LoginScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
+
                         // login button
                         ConditionalBuilder(
                           condition: state is! LoginLoadState,
@@ -132,13 +136,19 @@ class LoginScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text('dont have an account?'),
+                            const Text(
+                              'dont have an account?',
+                              style: TextStyle(color: Colors.black),
+                            ),
                             TextButton(
                               onPressed: () {
                                 navigatTO(context, RegisterScreen());
                               },
                               child: const Text(
                                 'Create Now',
+                                style: TextStyle(
+                                  color: Color.fromARGB(225, 239, 54, 81),
+                                ),
                               ),
                             ),
                           ],
